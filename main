@@ -3014,7 +3014,7 @@ Stall_Button.MouseButton1Click:Connect(function()
 end)
 
 Natural_Button.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet('loadstring(game:HttpGet("https://raw.githubusercontent.com/LiverMods/Rawnder-NTDR/main/RetroBaseNTDR"))()'))()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/LiverMods/Rawnder-NTDR/main/RetroBaseNTDR'))()
 	SendNotify("Mind Broken","NaturalGui Executado",3)
 end)
 
