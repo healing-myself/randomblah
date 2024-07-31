@@ -3004,17 +3004,17 @@ Night_Button.MouseButton1Click:Connect(function()
 end)
 
 Reverse_Button.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/healing-myself/randomblah/main/retorno'))()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/healing-myself/randomblah/main/retorno?token=GHSAT0AAAAAACVNI6AYXDPYKYGGUAKLHQ46ZVKU3HQ'))()
 	SendNotify("Mind Broken","Reverse Executado",3)
 end)
 
 Stall_Button.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/healing-myself/randomblah/main/basteal'))()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/healing-myself/randomblah/main/basteal?token=GHSAT0AAAAAACVNI6AZO34Z7BPQMUXWIA3GZVKU3GA'))()
 	SendNotify("Mind Broken","StallStealer Executado",3)
 end)
 
 Natural_Button.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/LiverMods/Rawnder-NTDR/main/RetroBaseNTDR'))()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/healing-myself/randomblah/main/natural?token=GHSAT0AAAAAACVNI6AY5T5QKLUUAGOIWSDIZVKU2QA'))()
 	SendNotify("Mind Broken","NaturalGui Executado",3)
 end)
 
