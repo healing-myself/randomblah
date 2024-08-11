@@ -248,6 +248,7 @@ local RthroAnim_Button = Instance.new("TextButton")
 local RobotAnim_Button = Instance.new("TextButton")
 local BubblyAnim_Button = Instance.new("TextButton")
 local AdidasAnim_Button = Instance.new("TextButton")
+local NoBounderiesAnim_Button = Instance.new("TextButton")
 --MY
 local myshAnim_Button = Instance.new("TextButton")
 local myshZombie_Button = Instance.new("TextButton")
@@ -459,7 +460,7 @@ Game_Section.BorderSizePixel = 0
 Game_Section.Position = UDim2.new(0, 105, 0, 30)
 Game_Section.Size = UDim2.new(0, 395, 0, 320)
 Game_Section.Visible = false
-Game_Section.CanvasSize = UDim2.new(0, 0, 1.85, 0)
+Game_Section.CanvasSize = UDim2.new(0, 0, 2, 0)
 Game_Section.ScrollBarThickness = 5
 
 myshAnim_Button.Name = "myshAnim_Button"
@@ -735,7 +736,7 @@ Character_Section.BorderSizePixel = 0
 Character_Section.Position = UDim2.new(0, 105, 0, 30)
 Character_Section.Size = UDim2.new(0, 395, 0, 320)
 Character_Section.Visible = false
-Character_Section.CanvasSize = UDim2.new(0, 0, 1, 0)
+Character_Section.CanvasSize = UDim2.new(0, 0, 1.1, 0)
 Character_Section.ScrollBarThickness = 5
 
 WalkSpeed_Button.Name = "WalkSpeed_Button"
@@ -1080,7 +1081,7 @@ Animations_Section.BorderSizePixel = 0
 Animations_Section.Position = UDim2.new(0, 105, 0, 30)
 Animations_Section.Size = UDim2.new(0, 395, 0, 320)
 Animations_Section.Visible = false
-Animations_Section.CanvasSize = UDim2.new(0, 0, 2.1, 0)
+Animations_Section.CanvasSize = UDim2.new(0, 0, 2.3, 0)
 Animations_Section.ScrollBarThickness = 5
 
 VampireAnim_Button.Name = "VampireAnim_Button"
@@ -1503,6 +1504,21 @@ AdidasAnim_Button.TextScaled = true
 AdidasAnim_Button.TextSize = 14.000
 AdidasAnim_Button.TextWrapped = true
 
+NoBounderiesAnim_Button.Name = "NoBounderiesAnim_Button"
+NoBounderiesAnim_Button.Parent = Animations_Section
+NoBounderiesAnim_Button.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
+NoBounderiesAnim_Button.BackgroundTransparency = 0.500
+NoBounderiesAnim_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NoBounderiesAnim_Button.BorderSizePixel = 0
+NoBounderiesAnim_Button.Position = UDim2.new(0, 25, 0, 725)
+NoBounderiesAnim_Button.Size = UDim2.new(0, 150, 0, 30)
+NoBounderiesAnim_Button.Font = Enum.Font.Oswald
+NoBounderiesAnim_Button.Text = "No Bounderies"
+NoBounderiesAnim_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+NoBounderiesAnim_Button.TextScaled = true
+NoBounderiesAnim_Button.TextSize = 14.000
+NoBounderiesAnim_Button.TextWrapped = true
+
 -- ANIMACOES A CIMA
 Misc_Section.Name = "Misc_Section"
 Misc_Section.Parent = Background
@@ -1919,6 +1935,7 @@ CreateClicker(BubblyAnim_Button)
 CreateClicker(myshAnim_Button)
 CreateClicker(myshZombie_Button)
 CreateClicker(AdidasAnim_Button)
+CreateClicker(NoBounderiesAnim_Button)
 --animacoes a cima
 CreateToggle(AntiChatSpy_Button)
 CreateToggle(AntiAFK_Button)
@@ -2914,6 +2931,21 @@ AdidasAnim_Button.MouseButton1Click:Connect(function()
 	Animate.Disabled = false
 end)
 
+NoBounderiesAnim_Button.MouseButton1Click:Connect(function()
+	local Animate = plr.Character.Animate
+	Animate.Disabled = true
+	StopAnim()
+	Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=18747067405"
+	Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=18747063918"
+	Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=18747074203"
+	Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=18747070484"
+	Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=18747069148"
+	Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=18747060903"
+	Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=18747062535"
+	plr.Character.Humanoid:ChangeState(3)
+	Animate.Disabled = false
+end)
+
 --MISC
 AntiChatSpy_Button.MouseButton1Click:Connect(function()
 	ChangeToggleColor(AntiChatSpy_Button)
@@ -3014,7 +3046,7 @@ Stall_Button.MouseButton1Click:Connect(function()
 end)
 
 Natural_Button.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/healing-myself/randomblah/main/natural'))()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/LiverMods/Rawnder-NTDR/main/RetroBaseNTDR'))()
 	SendNotify("Mind Broken","NaturalGui Executado",3)
 end)
 
